@@ -1,26 +1,20 @@
-import React, { useEffect, useState } from 'react'
+"use client"
+
+import React, { FormEvent, useEffect, useState } from 'react'
 import { IoIosLogIn } from "react-icons/io"
-import { getUser, signIn } from '../lib/api/auth';
 import Cookies from 'js-cookie';
-// import { isLoginState } from '../atoms/isLoginState';
-import { useSetRecoilState } from 'recoil';
 import toast from 'react-hot-toast';
 // import { redirect } from 'next/navigation';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
+import { signIn } from '@/lib/api/auth';
+import { useRouter } from 'next/navigation';
 
-const Login = () => {
+const page = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
   const router = useRouter();
-
-  const setIsLogin = useSetRecoilState(isLoginState);
-
-
-
-
 
 
   useEffect(() => {
@@ -29,18 +23,17 @@ const Login = () => {
     }
   }, [router]);
 
-  const login = async (e) => {
+  const login = async (e: FormEvent) => {
     e.preventDefault();
     try {
       const res = await signIn({ email, password });
       Cookies.set("_access_token", res.headers["access-token"]);
       Cookies.set("_client", res.headers["client"]);
       Cookies.set("_uid", res.headers["uid"]);
-      setIsLogin(Cookies.get("_access_token"))
 
-      router.push('/signup');
+      router.push('/');
       toast.success("ログインに成功しました");
-    } catch (e) {
+    } catch (e: any) {
       console.log(e);
       console.log(e.response.data.errors[0]);
       setErrorMessage(e.response.data.errors[0]);
@@ -54,7 +47,7 @@ const Login = () => {
         <div className='flex justify-center mt-20'>
           <div className='w-9/12 border border-gray-200 rounded-xl login_bg_opacity'>
           <div className="my-16 text-center">
-          <Link href="/home" className='signup_link'>
+          <Link href="/" className='signup_link'>
             <p className='mb-2'>ホーム画面に戻る</p>
           </Link>
 
@@ -88,7 +81,7 @@ const Login = () => {
                 ログイン<IoIosLogIn size={30} className='ml-2' />
               </button>
             </form>
-            <Link href="/signup">
+            <Link href="/register">
               <p className='signup_link'>
                 新規登録画面へ
               </p>
@@ -101,4 +94,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default page

@@ -1,12 +1,10 @@
-import type { Metadata } from "next";
+'use client'
+
 import "./globals.css";
+import Sidebar from "@/components/sidebar/Sidebar";
+import { RecoilRoot } from "recoil";
+import './App.scss'
 
-
-
-export const metadata: Metadata = {
-  title: "my_portfolio",
-  description: "HappinessChain self-made service assignment",
-};
 
 export default function RootLayout({
   children,
@@ -15,7 +13,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+      <RecoilRoot>
+
+        <Sidebar />
+        <div className="main">
+          {children}
+
+        </div>
+      </RecoilRoot>
+      </body>
     </html>
   );
 }

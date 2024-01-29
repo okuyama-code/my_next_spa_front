@@ -7,11 +7,11 @@ const authHeaders = {
   uid: Cookies.get("_uid"),
 };
 
-export const signUp = (params) => {
+export const signUp = (params: any) => {
   return client.post("/users", params);
 };
 
-export const signIn = (params) => {
+export const signIn = (params: any) => {
   return client.post("/users/sign_in", params);
 };
 
@@ -22,7 +22,7 @@ export const getUser = () => {
     !Cookies.get("_uid")
   )
     return;
-  return client.get("/sign_in", {
+  return client.get("/auth/sessions", {
     headers: authHeaders,
   });
 };
