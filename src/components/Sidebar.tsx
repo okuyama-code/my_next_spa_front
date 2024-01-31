@@ -14,20 +14,21 @@ import { ImExit } from "react-icons/im";
 
 import Cookies from 'js-cookie';
 // import { Withdrawal } from '../lib/api/user';
-import toast from 'react-hot-toast';
 import Link from 'next/link';
 import useCurrentUser from '@/hooks/useCurrentUser';
+import { CgEventbrite } from "react-icons/cg";
+
 
 const Sidebar = () => {
-
   const { currentUser } = useCurrentUser();
+
 
   const logout = (e: any) => {
     e.preventDefault()
     Cookies.remove('_access_token');
     Cookies.remove('_client');
     Cookies.remove('_uid');
-    toast.success("ログアウトしました");
+    window.location.reload();
   }
 
   // const currentUserDestroy = async (e) => {
@@ -53,6 +54,12 @@ const Sidebar = () => {
           <li className='flex items-center mb-3 mt-5 sidebar_items'>
             <IoHomeSharp size={40} className='mx-2 mb-3' />
             <span className='hidden xl:inline  font-bold pb-3 ml-3 '>ホーム</span>
+          </li>
+        </Link>
+        <Link href="/events">
+          <li className='flex items-center mb-3 mt-5 sidebar_items'>
+            <CgEventbrite size={40} className='mx-2 mb-3' />
+            <span className='hidden xl:inline  font-bold pb-3 ml-3'>イベント</span>
           </li>
         </Link>
         <Link href="/notifications">

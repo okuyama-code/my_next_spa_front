@@ -7,7 +7,7 @@ import toast from 'react-hot-toast';
 // import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { signIn } from '@/lib/api/auth';
-import { useRouter } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 
 const page = () => {
   const [email, setEmail] = useState("");
@@ -15,6 +15,11 @@ const page = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const router = useRouter();
+
+
+  useEffect(() => {
+    router.refresh();
+  }, [router])
 
 
   useEffect(() => {
@@ -32,11 +37,9 @@ const page = () => {
       Cookies.set("_uid", res.headers["uid"]);
 
       router.push('/');
-      toast.success("ログインに成功しました");
+      window.location.reload();
     } catch (e: any) {
       console.log(e);
-      console.log(e.response.data.errors[0]);
-      setErrorMessage(e.response.data.errors[0]);
       toast.error("ログイン情報が間違っています");
     }
   };

@@ -20,7 +20,7 @@ function useCurrentUser() {
       }
     }
     loadCurrentUser();
-  }, [])
+  }, [setCurrentUser])
   return { currentUser }
 }
 
