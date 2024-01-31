@@ -31,3 +31,192 @@ body {
     width: 95%;
   }
 }
+
+
+// ============= Profile ===================
+.profile {
+  position: relative;
+  z-index: 0;
+}
+
+.profileWrapper {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+}
+
+.profileCover {
+  height: 320px;
+  position: relative;
+}
+
+.profileCoverImg {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.profileInfo {
+  margin-top: 20px;
+  margin: 0 15px;
+}
+.profileUserImg {
+  position: absolute;
+  left: 30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: auto;
+  top: 170px;
+}
+
+.modalSaveButton {
+  position: absolute;
+  right: 40px;
+  top: 10px;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+
+  &:hover {
+    transition: 0.2s;
+    background: rgb(115, 115, 211);
+  }
+}
+
+.profileEditButton {
+  position: absolute;
+  right: 40px;
+  top: 270px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  &:hover {
+    transition: 0.2s;
+    background: rgb(170, 170, 225);
+  }
+}
+
+.deleteBtn {
+  margin-left: 30px;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgb(214, 98, 98);
+
+  &:hover {
+    transition: 0.2s;
+    opacity: 0.7;
+  }
+}
+
+.profileMessageButton {
+  position: absolute;
+  right: 10%;
+  top: 270px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  background: rgb(44, 229, 27);
+
+  &:hover {
+    transition: 0.2s;
+    opacity: 0.7;
+  }
+}
+
+.profilefollowButton {
+  position: absolute;
+  right: 220px;
+  top: 270px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  background: rgb(27, 155, 229);
+}
+
+.profileUnfollowButton {
+  position: absolute;
+  right: 220px;
+  top: 270px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  background: rgb(237, 55, 9);
+}
+
+.profileInfoName {
+  font-size: 24px;
+}
+
+.profileInfoUsername {
+  margin-bottom: 5px;
+}
+
+.profile_icons {
+  margin-top: 20px;
+  display: flex;
+}
+
+.profile_icon {
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 10px;
+  }
+}
+
+.profile_icon2 {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  span {
+    margin-left: 10px;
+  }
+}
+.profile_icon3 {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  span {
+    margin-left: 10px;
+  }
+}
+
+.profile_icon_link {
+  color: rgb(64, 64, 193);
+  text-decoration: underline;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.follow_profile {
+  display: flex;
+  margin-top: 10px;
+
+  span {
+    color: #747272;
+  }
+
+  p {
+    margin-right: 7px;
+  }
+}
+
+.profile_tabs {
+  margin-top: 10px;
+  .tablist {
+    background: rgb(107, 103, 103, 0.8);
+    text-align: center;
+  }
+
+  .tabPanel {
+    margin-top: 10px;
+  }
+}
+
+.profileInfoDesc {
+  width: 90%;
+  overflow-wrap: break-word; /* テキストを折り返す */
+}
+

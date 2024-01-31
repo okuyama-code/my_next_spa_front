@@ -7,6 +7,7 @@ import { FaPen } from "react-icons/fa";
 
 const Header = () => {
   const { currentUser } = useCurrentUser();
+
   return (
     <div className='header'>
       <div>
@@ -17,10 +18,10 @@ const Header = () => {
       <div>
         {currentUser
           ? (
-            <Link href="/user/1">
+            <Link href={`/users/${currentUser.id}`}>
               <div className='flex'>
                 <p className='header_user'>
-                  こんにちは、<strong>okuyama</strong>さん
+                  こんにちは、<strong>{currentUser.username}</strong>さん
                 </p>
                 <p className='create_post'>投稿する<FaPen className='ml-2 text-sm' /></p>
               </div>

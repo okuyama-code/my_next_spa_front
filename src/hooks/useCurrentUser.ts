@@ -12,7 +12,9 @@ function useCurrentUser() {
   useEffect(() => {
     async function loadCurrentUser () {
       try {
-        const res = await getUser();
+        const res: any = await getUser();
+        setCurrentUser(res.data.data)
+        console.log(res.data.data)
       } catch (e) {
         console.log(e)
       }

@@ -67,7 +67,7 @@ const Sidebar = () => {
             <span className='hidden xl:inline  font-bold pb-3 ml-3'>DM</span>
           </li>
         </Link>
-        {currentUser && (<Link href={`/users/${currentUser?.id} `}>
+        {currentUser && (<Link href={`/users/1 `}>
           <li className='flex items-center mb-3 sidebar_items'>
             <IoPersonSharp size={40} className='mx-2 mb-3' />
             <span className='hidden xl:inline  font-bold pb-3 ml-3'>プロフィール</span>
