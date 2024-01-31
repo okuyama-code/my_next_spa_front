@@ -1,0 +1,63 @@
+:root {
+  --text-white: #d2d2e4;
+  --bg-gray: #585353;
+}
+
+// =========== sidebar =================
+.sidebar {
+  display: flex;
+  justify-content: center;
+  margin-left: 40px;
+  height: 70vh;
+  width: 200px;
+  background-color: var(--bg-gray);
+  position: fixed;
+  color: var(--text-white);
+  border-radius: 5px;
+
+}
+
+@media screen and (max-width: 1280px) {
+  .sidebar {
+    width: 100px;
+
+
+    ul {
+      float: right;
+      margin-right: 10px;
+    }
+  }
+}
+
+.sidebar_items {
+  cursor: pointer;
+  &:hover {
+    color: rgba(144, 166, 234, 0.7);
+    transition: 0.4s ease;
+  }
+
+  span {
+    font-size: 25px;
+  }
+}
+
+
+
+
+// =================== Header ======================
+.header {
+  padding: 5px;
+
+  span {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    background-color: rgb(26, 125, 177);
+    border-radius: 10px;
+  }
+}

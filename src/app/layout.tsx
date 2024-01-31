@@ -1,9 +1,9 @@
 'use client'
 
 import "./globals.css";
-import Sidebar from "@/components/sidebar/Sidebar";
 import { RecoilRoot } from "recoil";
 import './App.scss'
+import Header from "@/components/Header";
 
 
 export default function RootLayout({
@@ -15,12 +15,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
       <RecoilRoot>
-
-        <Sidebar />
-        <div className="main">
-          {children}
-
-        </div>
+        <Header />
+        {children}
       </RecoilRoot>
       </body>
     </html>

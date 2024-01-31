@@ -1,4 +1,5 @@
 "use client"
+// TODO degaultでどんな値でも許容できるようにする
 
 import { atom } from "recoil";
 
@@ -9,6 +10,6 @@ export const currentUserState = atom({
     // Other properties you may want to include
     name: '',
     email: '',
-    // Add more properties as needed
+    username: ''
   },
 });
