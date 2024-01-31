@@ -220,3 +220,198 @@ body {
   overflow-wrap: break-word; /* テキストを折り返す */
 }
 
+
+// ============== group ====================
+.groupWrapper {
+  position: absolute;
+  top: 75px;
+  width: 75%;
+}
+
+.message_header {
+  text-align: center;
+  h2 {
+    font-size: 25px;
+    padding: 10px;
+    font-weight: bolder;
+  }
+}
+
+.messages_name {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  h2 {
+    margin-left: 10px;
+  }
+}
+
+.messages_page_body {
+  margin: 0 10px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+
+  width: 800px; /* 省略せずに表示するサイズを指定 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 1280px) {
+  .messages_page_body {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .messages_page_body {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .messages_page_body {
+    width: 250px;
+  }
+}
+
+
+.messages_list {
+  border: 1px solid rgb(214, 209, 209);
+  background-color: var(--bg-gray);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.messages_icon {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+//============= GroupDetail ===================
+.groupDetailWrapper {
+  position: absolute;
+  top: 80px;
+  width: 85%;
+}
+
+.message-box-header {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  color: #a9a2a2;
+
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 1.7rem;
+    margin: 0 60px 0 10px;  //「上」､「右」､「下」､「左」を指定（時計回り）
+    color: #aca9a9;
+  }
+
+  .info-item {
+    font-size: 1.4rem;
+    margin-left: 60px;
+  }
+}
+
+
+
+.message-box-body-info {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 95%;
+}
+
+
+.message-box-body-info p {
+  background-color: rgb(122, 118, 118);
+  border: 1px solid beige;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 10px 40px 10px;
+  color: #f8f4f4;
+  width: 350px;
+  overflow-wrap: break-word;
+}
+
+.message-box-body-info-other {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-right: 100px;
+}
+
+.message-box-body-info-other p {
+  background-color: rgb(116, 114, 114);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 350px;
+  overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 1280px) {
+  .message-box-body-info p {
+    width: 200px;
+
+  }
+
+  .message-box-body-info-other p {
+    width: 200px;
+   }
+
+
+}
+
+.messageForm {
+  input {
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 3px;
+    background-color: var(--bg-gray);
+
+  }
+
+  button {
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--bg-gray);
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .message-box-body-info {
+    width: 80%;
+  }
+  .messageForm {
+    input {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .messageForm {
+    input {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .messageForm {
+    input {
+      width: 60%;
+    }
+  }
+}
