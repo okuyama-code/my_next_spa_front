@@ -1,4 +1,4 @@
-import Link from "next/link";
+import TimeLine from '@/components/TimeLine';
 import './App.scss'
 import Sidebar from "@/components/Sidebar";
 
@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <Sidebar />
       <main className="main">
-        aaa
+        <TimeLine />
       </main>
     </div>
   );

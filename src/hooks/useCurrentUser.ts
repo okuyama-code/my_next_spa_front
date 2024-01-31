@@ -13,13 +13,11 @@ function useCurrentUser() {
     async function loadCurrentUser () {
       try {
         const res = await getUser();
-        setCurrentUser(res?.data.current_user_data)
       } catch (e) {
         console.log(e)
       }
     }
     loadCurrentUser();
-    // console.log(currentUser)
   }, [])
   return { currentUser }
 }

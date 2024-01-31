@@ -1,31 +1,39 @@
 :root {
+  --bg-main: #232020;
   --text-white: #d2d2e4;
+  --text-hover: #a8a8ea;
   --bg-gray: #585353;
+  --bg-gray-sub: #3b3434;
 }
 
 // =========== sidebar =================
 .sidebar {
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   margin-left: 40px;
-  height: 70vh;
   width: 200px;
   background-color: var(--bg-gray);
   position: fixed;
   color: var(--text-white);
   border-radius: 5px;
-
+  padding-bottom: 20px;
 }
 
 @media screen and (max-width: 1280px) {
   .sidebar {
     width: 100px;
-
-
     ul {
       float: right;
       margin-right: 10px;
     }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sidebar {
+    width: 70px;
+    margin-left: 10px;
   }
 }
 
@@ -46,7 +54,16 @@
 
 // =================== Header ======================
 .header {
+  position: fixed;
+  z-index: 1;
   padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-white);
+  background-color: var(--bg-main);
+  width: 100%;
+  border-radius: 5px;
 
   span {
     display: inline-block;
@@ -59,5 +76,129 @@
     margin-bottom: 20px;
     background-color: rgb(26, 125, 177);
     border-radius: 10px;
+    cursor: pointer;
+  }
+
+  p {
+    margin-right: 30px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .create_post {
+    background-color: rgb(26, 125, 177);
+    border-radius: 8px;
+    padding: 6px 8px;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    .header_user {
+      display: none;
+    }
+  }
+
+}
+
+
+// ========== timeline =========
+.timeline {
+  position: absolute;
+  top: 100px;
+  width: 80%;
+}
+
+@media screen and (max-width: 1280px) {
+  .timeline {
+    width: 77%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .timeline {
+    width: 72%;
+  }
+}
+
+
+
+.postWrapper {
+  padding: 5px;
+  background-color: var(--bg-gray);
+  border-radius: 5px;
+  margin-bottom: 5px;
+
+  .img {
+    border-radius: 50%;
+    border: 1px solid var(--text-white);
+    margin: 0 15px;
+  }
+
+  .post_user {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .post_info {
+    margin-left: 72px;
+    margin-top: 5px;
+
+    h2 {
+      font-size: 19px;
+      width: 95%;
+      color: #ececf2;
+
+      &:hover {
+        color: var(--text-hover);
+        transition: 0.4s;
+      }
+    }
+
+    .post_tag {
+      display: inline-block;
+      background-color: var(--bg-gray-sub);
+      margin: 10px 0;
+      margin-right: 7px;
+      padding: 2px 3px;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 728px) {
+  .timeline {
+    width: 70%;
+
+    .post_info {
+      h2 {
+        font-size: 17px;
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .timeline {
+    width: 78%;
+
+    .post_info {
+      h2 {
+        font-size: 16px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 2; /* 表示する行数を指定 */
+      }
+
+      .post_tag {
+        font-size: 13px;
+      }
+    }
   }
 }

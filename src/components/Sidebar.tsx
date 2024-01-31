@@ -9,7 +9,6 @@ import { IoMailOutline } from "react-icons/io5";
 import { IoPersonSharp } from "react-icons/io5";
 import { CiCircleMore } from "react-icons/ci";
 
-import { GiBirdTwitter } from "react-icons/gi";
 import { IoExitOutline } from "react-icons/io5";
 import { ImExit } from "react-icons/im";
 
@@ -49,7 +48,7 @@ const Sidebar = () => {
 
   return (
     <div className='sidebar'>
-      <ul className='mt-3 ml-5'>
+      <ul className='mt-3 ml-3'>
         <Link href="/">
           <li className='flex items-center mb-3 mt-5 sidebar_items'>
             <IoHomeSharp size={40} className='mx-2 mb-3' />
@@ -94,12 +93,6 @@ const Sidebar = () => {
           </button>
           <span className='hidden xl:inline text-3xl font-bold pb-3 ml-3'>退会</span>
         </li>
-
-        <Link href="/register">
-          <li className='flex items-center mb-3 sidebar_items'>
-            新規登録
-          </li>
-        </Link>
       </ul>
     </div>
   )
