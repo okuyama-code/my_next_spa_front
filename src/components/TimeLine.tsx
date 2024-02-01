@@ -25,7 +25,7 @@ const TimeLine = () => {
           </div>
         </div>
         <div className='post_info'>
-          <Link href="/postDetail">
+          <Link href="/posts/1">
             <h2>WEBの基本入門  ステートフル vs ステートレス、リクエストとレスポンス、クッキー、プロトコル、ポート番号について</h2>
           </Link>
           <div className='flex'>

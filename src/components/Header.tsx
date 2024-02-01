@@ -45,7 +45,8 @@ const Header = () => {
           <p className='header_user'>
             こんにちは、<strong>{currentUser?.username}</strong>さん
           </p>
-          <p className='create_post'>投稿する<FaPen className='ml-2 text-sm' /></p>
+          <button className='create_post'>ホームへ投稿<FaPen className='ml-2 text-sm' /></button>
+          <button className='create_post'>イベントへ投稿<FaPen className='ml-2 text-sm' /></button>
         </div>
       </Link>
     </div>

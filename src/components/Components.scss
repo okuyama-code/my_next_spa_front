@@ -5,7 +5,6 @@
   --bg-gray: #585353;
   --bg-gray-sub: #3b3434;
   --bg-blue: rgb(26, 125, 177);
-
 }
 
 // =========== sidebar =================
@@ -95,6 +94,7 @@
     font-weight: bold;
     display: flex;
     align-items: center;
+    margin-right: 5px;
   }
 }
 
@@ -264,7 +264,12 @@
 }
 
 .event_info_item_details {
-  background-color:#84867f;
-  width: 80%;
+  margin-top: 5px;
+  width: 90%;
   white-space : pre-line;
+
+  h2 {
+    font-weight: bolder;
+    color: #2babf5;
+  }
 }

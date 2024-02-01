@@ -1,3 +1,12 @@
+:root {
+  --bg-main: #232020;
+  --text-white: #d2d2e4;
+  --text-hover: #a8a8ea;
+  --bg-gray: #585353;
+  --bg-gray-sub: #3b3434;
+  --bg-blue: rgb(26, 125, 177);
+}
+
 body {
   background: #232020;
 }
@@ -597,3 +606,23 @@ body {
   }
 }
 
+// ========== timeline =========
+.postDetail {
+  position: absolute;
+  top: 130px;
+  width: 80%;
+  background-color: var(--bg-gray);
+  padding: 30px 40px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1280px) {
+  .postDetail {
+    width: 77%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .postDetail {
+    width: 72%;
+  }
+}
