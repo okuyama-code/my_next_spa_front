@@ -4,6 +4,8 @@
   --text-hover: #a8a8ea;
   --bg-gray: #585353;
   --bg-gray-sub: #3b3434;
+  --bg-blue: rgb(26, 125, 177);
+
 }
 
 // =========== sidebar =================
@@ -74,7 +76,7 @@
     margin-top: 10px;
     margin-left: 50px;
     margin-bottom: 20px;
-    background-color: rgb(26, 125, 177);
+    background-color: var(--bg-blue);
     border-radius: 10px;
     cursor: pointer;
   }
@@ -86,7 +88,7 @@
   }
 
   .create_post {
-    background-color: rgb(26, 125, 177);
+    background-color: var(--bg-blue);
     border-radius: 8px;
     padding: 6px 8px;
     font-size: 15px;
@@ -97,7 +99,7 @@
 }
 
 .loginButton {
-  background-color: rgb(26, 125, 177);
+  background-color: var(--bg-blue);
   padding: 5px;
   border-radius: 5px;
 
@@ -210,3 +212,59 @@
   }
 }
 
+// ============= イベント =========================
+.eventHeader {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.event_info {
+  margin-left: 72px;
+  margin-top: 5px;
+
+  h2 {
+    font-size: 19px;
+    width: 95%;
+    color: #ececf2;
+    margin-bottom: 8px;
+  }
+
+  h3 {
+    font-size: 17px;
+    width: 95%;
+    color: #ececf2;
+    margin-bottom: 8px;
+  }
+
+  .event_info_item {
+    padding: 2px;
+    background-color: var(--bg-blue);
+    border-radius: 5px;
+  }
+
+  .event_info_item_link {
+    margin-left: 5px;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+
+
+  .post_tag {
+    display: inline-block;
+    background-color: var(--bg-gray-sub);
+    margin: 10px 0;
+    margin-right: 7px;
+    padding: 2px 3px;
+    border-radius: 5px;
+  }
+}
+
+.event_info_item_details {
+  background-color:#84867f;
+  width: 80%;
+  white-space : pre-line;
+}
