@@ -616,6 +616,35 @@ body {
   border-radius: 5px;
 }
 
+.post_show_tag {
+  display: inline-block;
+  background-color: var(--bg-gray-sub);
+  margin: 10px 0;
+  margin-right: 7px;
+  padding: 2px 3px;
+  border-radius: 5px;
+}
+
+.post_body {
+  margin-top: 5px;
+  width: 90%;
+  white-space : pre-line;
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+
+
+
+
 @media screen and (max-width: 1280px) {
   .postDetail {
     width: 77%;
